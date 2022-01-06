@@ -3,6 +3,11 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
   authHeader: {
+    padding: 6,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignSelf: 'flex-end',
+    marginRight: 5,
     alignItems: 'center',
     flexWrap: 'wrap',
   },

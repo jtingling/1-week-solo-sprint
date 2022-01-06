@@ -7,14 +7,34 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(1),
   },
   label: {
+    '&.MuiFormLabel-root': {
+      fontFamily: theme.typography.fontFamily,
+      fontWeight: 900,
+      color: theme.palette.secondary.dark,
+      fontSize: 16,
+      paddingLeft: '5px',
+    },
     fontSize: 19,
     color: 'rgb(0,0,0,0.4)',
     paddingLeft: '5px',
   },
   inputs: {
-    marginTop: '.8rem',
-    height: '2rem',
-    padding: '5px',
+    '&.MuiInputBase-input': {
+      [theme.breakpoints.up('sm')]: {
+        fontSize: 20,
+        fontFamily: theme.typography.fontFamily,
+        height: '3rem',
+        paddingLeft: '25px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: 10,
+        fontFamily: theme.typography.fontFamily,
+        height: '1rem',
+        paddingLeft: '12px',
+      },
+    },
+    marginTop: '1rem',
+    width: 'inherit',
   },
   forgot: {
     paddingRight: 10,
@@ -28,7 +48,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     borderRadius: theme.shape.borderRadius,
     marginTop: 49,
     fontSize: 16,
-    backgroundColor: '#3a8dff',
+    backgroundColor: theme.palette.primary.main,
     fontWeight: 'bold',
   },
 }));
