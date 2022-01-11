@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 
-const availabilitySchema = new mongoose.Schema({
-    day: {type: Number},
-    month: {type: Number},
-    year: {type: Number},
-    from: {type: String},
-    to: {type: String},
+const availabilitySchema = new mongoose.Schema({ 
+    date: String,
+    schedule: [{ from: String, to: String, isAvailable: Boolean}],
+
 }, { toJSON: { virtuals: true } })
 
 module.exports = availabilitySchema;
